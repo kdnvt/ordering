@@ -163,8 +163,8 @@ int main()
         if (r1 == 1 && r2 == 1)
         {
             detected++;
-            printf("%d reorders detected after %d iterations,r1 = %d,r2 = %d\n", detected, iterations,r1,r2);
-        } 
+            printf("%d reorders detected after %d iterations\n", detected, iterations);
+        }
     }
     return 0;  // Never returns
 }
