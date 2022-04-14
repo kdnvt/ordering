@@ -1,0 +1,11 @@
+This program is modified from example in
+https://preshing.com/20120515/memory-reordering-caught-in-the-act/.
+
+This program is an experiment on memory order, where there should allow
+only one thread enter the
+ 
+if(__atomic_load_n(&Y,__ATOMIC_RELAXED) != __atomic_load_n(&X,__ATOMIC_RELAXED))
+
+statement. 
+
+However, according to the result of the experiment, if I don't apply the StoreLoad barrier, the r1 and r2 could both be one.
